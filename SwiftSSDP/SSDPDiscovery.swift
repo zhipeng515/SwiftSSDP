@@ -53,7 +53,7 @@ public class SSDPDiscovery: NSObject {
     public static let ssdpPort: Int = 1900
     
     /// Singleton access to a discovery operating on the main dispatch queue
-    open static let defaultDiscovery = SSDPDiscovery()
+    public static let defaultDiscovery = SSDPDiscovery()
     
     /// Private initialization using the global queue
     private override init() {
