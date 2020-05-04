@@ -52,7 +52,7 @@ extension SSDPMSearchResponse : CustomDebugStringConvertible {
 }
 
 extension SSDPMSearchResponse {
-    func retrieveLocation(with session: URLSession, _ completionBlock: @escaping (Data?, Error?)->Void) {
+    public func retrieveLocation(with session: URLSession, _ completionBlock: @escaping (Data?, Error?)->Void) {
         let task = session.dataTask(with: self.location) { (data, response, error) in
             if let error = error {
                 DispatchQueue.main.async { completionBlock(nil, error) }
